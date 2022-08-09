@@ -28,11 +28,13 @@ class FlatIterator:
         return self.my_list[self.nested_list_cursor][self.my_list_cursor]
 
 
-if __name__ == '__main__':
-    my_iter_list = []
+
+def main():
     for elem in FlatIterator(nested_list):
-        my_iter_list.append(elem)
         print(elem)
 
     flat_list = [item for item in FlatIterator(nested_list)]
     print(flat_list)
+
+if __name__ == '__main__':
+    main()
